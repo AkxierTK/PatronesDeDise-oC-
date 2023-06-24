@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    decimal totalLocal = (decimal)ViewBag.total;
+    decimal foreing = (decimal)ViewBag.foreintTotal;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @if (totalLocal != null)
+    {
+    <h2>@totalLocal</h2>
+        
+    }
+
+
+    @if (foreing != null)
+    {
+        <h2>@foreing</h2>
+    }
+</div>
