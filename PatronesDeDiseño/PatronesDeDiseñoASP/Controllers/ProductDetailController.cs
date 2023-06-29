@@ -5,13 +5,22 @@ namespace PatronesDeDiseñoASP.Controllers
 {
     public class ProductDetailController : Controller
     {
+
+        private EarnFactory _localEarnFactory;
+
+
+        public ProductDetailController(LocalEarnFactory localEarnFactory)
+        {
+            _localEarnFactory = localEarnFactory;
+        }
+
         public IActionResult Index(decimal total)
         {
 
-            LocalEarnFactory localEarnFactory = new LocalEarnFactory(0.20m);
+          
 
 
-            var localEarn = localEarnFactory.GetEarn();
+            var localEarn = _localEarnFactory.GetEarn();
 
             ViewBag.total = total + localEarn.Earn(total);
 

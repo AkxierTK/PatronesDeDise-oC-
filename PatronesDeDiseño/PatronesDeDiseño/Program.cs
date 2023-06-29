@@ -1,4 +1,6 @@
-﻿using PatronesDeDiseño.FactoryPattern;
+﻿using PatronesDeDiseño.DependencyInjectionPattern;
+using PatronesDeDiseño.FactoryPattern;
+using System.Linq.Expressions;
 
 namespace PatronesDeDiseño
 {
@@ -32,6 +34,14 @@ namespace PatronesDeDiseño
 
             sale2.Sell(20);
 
+
+            //DependencyInjection
+
+            Beer cerveza = new Beer("Ceveza","Aguila");
+
+            BebidaConCerveza bebida = new BebidaConCerveza(cerveza, 10, 1);
+
+            bebida.Build();
 
         }
     }
