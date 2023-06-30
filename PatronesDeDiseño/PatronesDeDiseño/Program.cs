@@ -1,6 +1,9 @@
 ﻿using PatronesDeDiseño.DependencyInjectionPattern;
 using PatronesDeDiseño.FactoryPattern;
+using PatronesDeDiseño.Models;
+using PatronesDeDiseño.RepositoryPattern;
 using System.Linq.Expressions;
+using Beer = PatronesDeDiseño.DependencyInjectionPattern.Beer;
 
 namespace PatronesDeDiseño
 {
@@ -42,6 +45,53 @@ namespace PatronesDeDiseño
             BebidaConCerveza bebida = new BebidaConCerveza(cerveza, 10, 1);
 
             bebida.Build();
+
+            //RepositoryPattern
+                //Modelado directo
+            using ( var context = new PatronesDeDiseñoContext())
+            {
+                var lst = context.Beers.ToList();
+
+                foreach ( var beer in lst)
+                {
+                    Console.WriteLine($"{beer.Name}, {beer.Style}");
+                }
+
+            }
+
+            using (var context = new PatronesDeDiseñoContext())
+            {
+                var beerRepository = new BeerRepository(context);
+
+                var beer = new Models.Beer();
+
+                beer.Name = "corona";
+                beer.Style = "rubia";
+
+                beerRepository.Add( beer );
+                beerRepository.Save();
+
+                foreach ( var beerl in beerRepository.Get())
+                {
+                    Console.WriteLine($"{beerl.Name}, {beerl.Style}");
+                }
+
+            }
+
+            //TEntry permite trabajar con cualquier objeto del modelo
+            //Using libera memoria conexiones al terminar
+            using (var context = new PatronesDeDiseñoContext())
+            {
+                var beerRepository = new Repository<Brand>(context);
+
+                var brand = new Brand();
+
+                brand.Name = "Jonny Walker";
+
+                beerRepository.Add(brand);
+                beerRepository.Save();  
+                
+            }
 
         }
     }

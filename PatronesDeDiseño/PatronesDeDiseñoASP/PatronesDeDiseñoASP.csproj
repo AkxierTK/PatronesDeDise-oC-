@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PatronesDeDiseño.Models\PatronesDeDiseño.Models.csproj" />
+    <ProjectReference Include="..\PatronesDeDiseño.Repository\PatronesDeDiseño.Repository.csproj" />
     <ProjectReference Include="..\Tools\Tools.csproj" />
   </ItemGroup>
 

@@ -8,7 +8,7 @@ namespace PatronesDeDiseñoASP.Controllers
 
         private EarnFactory _localEarnFactory;
 
-
+        //Al injectar directamente desde Program.cs no se tiene la dependencia de la creación y solo habría que modificar en 1 único lugar el código
         public ProductDetailController(LocalEarnFactory localEarnFactory)
         {
             _localEarnFactory = localEarnFactory;
@@ -16,9 +16,6 @@ namespace PatronesDeDiseñoASP.Controllers
 
         public IActionResult Index(decimal total)
         {
-
-          
-
 
             var localEarn = _localEarnFactory.GetEarn();
 

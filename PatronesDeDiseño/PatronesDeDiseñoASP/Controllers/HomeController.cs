@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using PatronesDeDiseño.Models.Data;
+using PatronesDeDiseño.Repository;
 using PatronesDeDiseñoASP.Configuration;
 using PatronesDeDiseñoASP.Models;
 using System.Diagnostics;
@@ -12,15 +14,21 @@ namespace PatronesDeDiseñoASP.Controllers
 
         private readonly IOptions<MiConfig> _config;
 
-        public HomeController(IOptions<MiConfig> config)
+        private readonly IRepository<Beer> _repository;
+
+        public HomeController(IOptions<MiConfig> config, IRepository<Beer> repository)
         {
             _config = config;
+            _repository = repository;
         }
 
         public IActionResult Index()
         {
+
+            IEnumerable <Beer> list = _repository.Get();
+
             Log.GetInstance(_config.Value.PathLog).Save("Entro a Index");
-            return View();
+            return View("Index",list);
         }
 
         public IActionResult Privacy()

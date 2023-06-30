@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using PatronesDeDiseño.Models.Data;
+using PatronesDeDiseño.Repository;
 using PatronesDeDiseñoASP.Configuration;
 using Tools.Earn;
 
@@ -19,6 +22,15 @@ builder.Services.AddTransient((factory) =>
     //Al añadir los valoes desde el fichero appSettings.json se resuelve el problema de modificar los valores de manera manual
     return new LocalEarnFactory(builder.Configuration.GetSection("MiConig").GetValue<decimal>("LocalPercentage"));
 });
+
+//Agregamos el contexto
+builder.Services.AddDbContext<PatronesDeDiseñoContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("Connection"));
+});
+
+//Agregamos para tdodos los controladores la clase repository
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
 

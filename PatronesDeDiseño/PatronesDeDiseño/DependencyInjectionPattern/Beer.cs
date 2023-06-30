@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace PatronesDeDiseño.DependencyInjectionPattern
 {
+
+    //La tarea de injeccion de dependencias es quitarle la responsabilidad de la creación de un objeto a otro contenga como parámetro otro objeto.
+    //Dandole así el objeto ya creado para que la responsabilidad no caiga en el objeto y se pueda operar sin necesidad de conocer la función del objeto parametrizado
+    //En el ejemplo se puede ver que tenemos la clase Cerveza que es también un parámetro de Bebida con cerveza
+    //Por lo que si en algun momento se cambia la construcción del objeto Beer, no es responsabilidad de Bebida con cerveza como funciona
     public class Beer
     {
         private string _name;
