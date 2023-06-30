@@ -2,6 +2,7 @@
 using PatronesDeDiseño.FactoryPattern;
 using PatronesDeDiseño.Models;
 using PatronesDeDiseño.RepositoryPattern;
+using PatronesDeDiseño.UnityOfWorkPattern;
 using System.Linq.Expressions;
 using Beer = PatronesDeDiseño.DependencyInjectionPattern.Beer;
 
@@ -91,6 +92,44 @@ namespace PatronesDeDiseño
                 beerRepository.Add(brand);
                 beerRepository.Save();  
                 
+            }
+
+            //UnityOfWork
+
+            using (var context = new PatronesDeDiseñoContext())
+            {
+                var unity = new UnitOfWork(context);
+
+                var beers = unity.Beers;
+                var beers2 = unity.Beers;
+
+
+                if (beers2 == beers)
+                {
+                    Console.WriteLine("Iguales");
+                }
+                var beer  = new Models.Beer()
+                {
+                    Name = "fuller",
+                    Style = "manuel"
+                };
+
+                var brands = unity.Brands;
+                var brand = new Brand()
+                {
+                    Name = "ManuelSA"
+                };
+
+                brands.Add(brand);
+
+                unity.save();
+
+
+                if (beers2== beers )
+                {
+                    Console.WriteLine("Iguales");
+                }
+
             }
 
         }
