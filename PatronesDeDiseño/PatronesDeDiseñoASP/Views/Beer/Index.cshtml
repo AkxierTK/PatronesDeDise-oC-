@@ -1,0 +1,17 @@
+﻿@using PatronesDeDiseñoASP.Models.ViewModels
+@model IEnumerable<BeerViewModel>
+
+<div class="row">
+    <div class="col-12">
+        <a class="btn btn-primary" href="~/Beer/Add">NuevaCerveza</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        @foreach( var beer in Model)
+        {
+            <p>@beer.Name</p>
+        }
+    </div>
+</div>

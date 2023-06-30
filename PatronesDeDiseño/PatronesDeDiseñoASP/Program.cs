@@ -31,6 +31,7 @@ builder.Services.AddDbContext<PatronesDeDiseñoContext>(option =>
 
 //Agregamos para tdodos los controladores la clase repository
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 

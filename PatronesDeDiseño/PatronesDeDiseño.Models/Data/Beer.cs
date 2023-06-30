@@ -10,4 +10,6 @@ public partial class Beer
     public string Name { get; set; } = null!;
 
     public string Style { get; set; } = null!;
+
+    public Guid BrandId { get; set; }
 }

@@ -5,7 +5,7 @@ namespace PatronesDeDiseño.Models.Data;
 
 public partial class Brand
 {
-    public int BrandId { get; set; }
+    public Guid BrandId { get; set; }
 
-    public string Name { get; set; } = null!;
+    public string? Name { get; set; }
 }
