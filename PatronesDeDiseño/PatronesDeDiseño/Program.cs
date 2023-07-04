@@ -2,6 +2,7 @@
 using PatronesDeDiseño.FactoryPattern;
 using PatronesDeDiseño.Models;
 using PatronesDeDiseño.RepositoryPattern;
+using PatronesDeDiseño.StrategyPattern;
 using PatronesDeDiseño.UnityOfWorkPattern;
 using System.Linq.Expressions;
 using Beer = PatronesDeDiseño.DependencyInjectionPattern.Beer;
@@ -49,88 +50,99 @@ namespace PatronesDeDiseño
 
             //RepositoryPattern
                 //Modelado directo
-            using ( var context = new PatronesDeDiseñoContext())
-            {
-                var lst = context.Beers.ToList();
+            //using ( var context = new PatronesDeDiseñoContext())
+            //{
+            //    var lst = context.Beers.ToList();
 
-                foreach ( var beer in lst)
-                {
-                    Console.WriteLine($"{beer.Name}, {beer.Style}");
-                }
+            //    foreach ( var beer in lst)
+            //    {
+            //        Console.WriteLine($"{beer.Name}, {beer.Style}");
+            //    }
 
-            }
+            //}
 
-            using (var context = new PatronesDeDiseñoContext())
-            {
-                var beerRepository = new BeerRepository(context);
+            //using (var context = new PatronesDeDiseñoContext())
+            //{
+            //    var beerRepository = new BeerRepository(context);
 
-                var beer = new Models.Beer();
+            //    var beer = new Models.Beer();
 
-                beer.Name = "corona";
-                beer.Style = "rubia";
+            //    beer.Name = "corona";
+            //    beer.Style = "rubia";
 
-                beerRepository.Add( beer );
-                beerRepository.Save();
+            //    beerRepository.Add( beer );
+            //    beerRepository.Save();
 
-                foreach ( var beerl in beerRepository.Get())
-                {
-                    Console.WriteLine($"{beerl.Name}, {beerl.Style}");
-                }
+            //    foreach ( var beerl in beerRepository.Get())
+            //    {
+            //        Console.WriteLine($"{beerl.Name}, {beerl.Style}");
+            //    }
 
-            }
+            //}
 
-            //TEntry permite trabajar con cualquier objeto del modelo
-            //Using libera memoria conexiones al terminar
-            using (var context = new PatronesDeDiseñoContext())
-            {
-                var beerRepository = new Repository<Brand>(context);
+            ////TEntry permite trabajar con cualquier objeto del modelo
+            ////Using libera memoria conexiones al terminar
+            //using (var context = new PatronesDeDiseñoContext())
+            //{
+            //    var beerRepository = new Repository<Brand>(context);
 
-                var brand = new Brand();
+            //    var brand = new Brand();
 
-                brand.Name = "Jonny Walker";
+            //    brand.Name = "Jonny Walker";
 
-                beerRepository.Add(brand);
-                beerRepository.Save();  
+            //    beerRepository.Add(brand);
+            //    beerRepository.Save();  
                 
-            }
+            //}
 
-            //UnityOfWork
+            ////UnityOfWork
 
-            using (var context = new PatronesDeDiseñoContext())
-            {
-                var unity = new UnitOfWork(context);
+            //using (var context = new PatronesDeDiseñoContext())
+            //{
+            //    var unity = new UnitOfWork(context);
 
-                var beers = unity.Beers;
-                var beers2 = unity.Beers;
-
-
-                if (beers2 == beers)
-                {
-                    Console.WriteLine("Iguales");
-                }
-                var beer  = new Models.Beer()
-                {
-                    Name = "fuller",
-                    Style = "manuel"
-                };
-
-                var brands = unity.Brands;
-                var brand = new Brand()
-                {
-                    Name = "ManuelSA"
-                };
-
-                brands.Add(brand);
-
-                unity.save();
+            //    var beers = unity.Beers;
+            //    var beers2 = unity.Beers;
 
 
-                if (beers2== beers )
-                {
-                    Console.WriteLine("Iguales");
-                }
+            //    if (beers2 == beers)
+            //    {
+            //        Console.WriteLine("Iguales");
+            //    }
+            //    var beer  = new Models.Beer()
+            //    {
+            //        Name = "fuller",
+            //        Style = "manuel"
+            //    };
 
-            }
+            //    var brands = unity.Brands;
+            //    var brand = new Brand()
+            //    {
+            //        Name = "ManuelSA"
+            //    };
+
+            //    brands.Add(brand);
+
+            //    unity.save();
+
+
+            //    if (beers2== beers )
+            //    {
+            //        Console.WriteLine("Iguales");
+            //    }
+
+            //}
+
+            //Strategy
+
+            var contextS = new Context( new CarStrategy());
+
+            contextS.run();
+
+            contextS.Strategy= new MotoStrategy();
+
+            contextS.run();
+
 
         }
     }
