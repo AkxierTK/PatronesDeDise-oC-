@@ -10,6 +10,7 @@ namespace PatronesDeDiseño.UnityOfWorkPattern
 {
 
     //Permite trabajar a la misma vez con los objetos de los modelos en una misma instancia. 1 conexión usada para trabajar con todos los objetos antes de cerrar
+    //Unity of work mejora Repository Patter creando así el mismo contexto para dos modelos y por lo tanto si hay que actualizar o manipular 100 objetos da igual si son iguales o no se pueden trabajar en el mismo contexto.
     public class UnitOfWork : IUnitOfWork
     {
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace PatronesDeDiseño.Models.Data;
+namespace PatronesDeDiseño.Models.Models;
 
 public partial class PatronesDeDiseñoContext : DbContext
 {
