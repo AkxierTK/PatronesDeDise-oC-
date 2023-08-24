@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "tm8x6hWujP56OENu8l7ICm6dtZickZ30EjA2IwQnLxY=",
+  "Source": "TestBot",
+  "BasePath": "_content/TestBot",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TestBot\\wwwroot",
+      "Source": "TestBot",
+      "ContentRoot": "C:\\Users\\riber\\Desktop\\Proyectos\\Patrones de Diseño C#\\TestBot\\TestBot\\wwwroot\\",
+      "BasePath": "_content/TestBot",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\riber\\Desktop\\Proyectos\\Patrones de Diseño C#\\TestBot\\TestBot\\wwwroot\\default.htm",
+      "SourceId": "TestBot",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\riber\\Desktop\\Proyectos\\Patrones de Diseño C#\\TestBot\\TestBot\\wwwroot\\",
+      "BasePath": "_content/TestBot",
+      "RelativePath": "default.htm",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\default.htm"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A0mHFEkGQt6a+kjwPL4g6lKJbI0vcTPpdt6BU7terfIeBc5UqDDA7pl76OyO17cEgA3ip0raG8TsloJBZm6sqg==",
+  "dgSpecHash": "GrEWRobAYYlng6e567PAizuVhHtcJfd17+fJ6AE4ojsnHijYIcnSmLiFzjT2v7tc2NiKr+McXMBpTUQTBExtYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\riber\\Desktop\\Proyectos\\Patrones de Diseño C#\\PatronesDeDiseño\\PatronesDeDiseño.Repository\\PatronesDeDiseño.Repository.csproj",
   "expectedPackageFiles": [
@@ -65,7 +65,10 @@
     "C:\\Users\\riber\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\riber\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\riber\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\riber\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+    "C:\\Users\\riber\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.19\\microsoft.windowsdesktop.app.ref.6.0.19.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.19\\microsoft.netcore.app.ref.6.0.19.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.19\\microsoft.aspnetcore.app.ref.6.0.19.nupkg.sha512"
   ],
   "logs": []
 }

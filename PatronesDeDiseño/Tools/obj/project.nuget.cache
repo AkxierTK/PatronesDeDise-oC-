@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kDxc0oH3hn1kInupAHHn8RbLTMCq+06RnsWavsrRlfBNkU21k9FHHqxbw0xG/+lDCUoV7OtDv6foVpPp7/5+Mw==",
+  "dgSpecHash": "2PKazhj8/BiAzVsmUSrijiGaczLzyEpIAmhMmYkjpCJdzZnNzS/CLdOPAKsEP7BBOUiLks63G8mlkLTDLNwufA==",
   "success": true,
   "projectFilePath": "C:\\Users\\riber\\Desktop\\Proyectos\\Patrones de Diseño C#\\PatronesDeDiseño\\Tools\\Tools.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.19\\microsoft.windowsdesktop.app.ref.6.0.19.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.19\\microsoft.netcore.app.ref.6.0.19.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.19\\microsoft.aspnetcore.app.ref.6.0.19.nupkg.sha512"
+  ],
   "logs": []
 }

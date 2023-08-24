@@ -1,4 +1,5 @@
-﻿using PatronesDeDiseño.DependencyInjectionPattern;
+﻿using PatronesDeDiseño.BuilderPattern;
+using PatronesDeDiseño.DependencyInjectionPattern;
 using PatronesDeDiseño.FactoryPattern;
 using PatronesDeDiseño.Models;
 using PatronesDeDiseño.RepositoryPattern;
@@ -143,7 +144,20 @@ namespace PatronesDeDiseño
 
             contextS.run();
 
+            //Builder
+
+            var builder = new BuilderPattern.BebidasAlcoholicas();
+            var bardman = new BarmanDirector(builder);
+
+            bardman.PrepararMojito();
+
+            var bebidaPreparada = builder.GetBebidaPreparada();
+
+            Console.WriteLine(bebidaPreparada.Result);
+
 
         }
+
+
     }
 }

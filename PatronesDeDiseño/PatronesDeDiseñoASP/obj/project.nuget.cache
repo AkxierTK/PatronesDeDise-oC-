@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P00DLAual9V+JgK7Awk5CjJLKQFAUKmJotrJaGtWIK1iVnhLfN0FFP+AchHRB2AVMbZHnDq3dXKu71w46/I6yg==",
+  "dgSpecHash": "B4Ea15AqCWcYYXnUWbKXObUNLtu6VNJ73otqGt65lmwg4YexIa44jnRSDFCH88qrCKXN9BFGU7M+NchHzVtPVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\riber\\Desktop\\Proyectos\\Patrones de Diseño C#\\PatronesDeDiseño\\PatronesDeDiseñoASP\\PatronesDeDiseñoASP.csproj",
   "expectedPackageFiles": [
@@ -223,7 +223,11 @@
     "C:\\Users\\riber\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\riber\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\riber\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\riber\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\riber\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.19\\microsoft.windowsdesktop.app.ref.6.0.19.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.19\\microsoft.netcore.app.ref.6.0.19.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.19\\microsoft.aspnetcore.app.ref.6.0.19.nupkg.sha512",
+    "C:\\Users\\riber\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.19\\microsoft.netcore.app.host.win-x64.6.0.19.nupkg.sha512"
   ],
   "logs": []
 }
